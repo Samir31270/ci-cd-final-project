@@ -55,7 +55,7 @@ spec:
         #!/bin/bash
         set -e
         python -m pip install --upgrade pip wheel
-        ntm
-        pip install -r /home/project/ci-cd-final-project/.tekton/requirements.txt
-        nosetests $(params.args)     
+        cd /home/project/ci-cd-final-project/.tekton/
+        pip install -r requirements.txt
+        nosetests $(params.args)    
 
